@@ -48,7 +48,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Enhancing Robot Safety via MLLM-Based Semantic Interpretation of Failure Data</h1>
+          <h1 class="title is-1 publication-title">From Perception Logs to Failure Modes: Language-Driven Semantic Clustering of Failures for Robot Safety</h1>
           <div class="is-size-4 publication-authors">
             <!-- <span class="author-block">                                                                # UNCOMMENT AFTER ACCEPTANCE
               <a href="https://aryamangupta.site/">Aryaman Gupta</a>&nbsp;&nbsp;
@@ -77,8 +77,9 @@
               </span> -->
               <!-- arXiv Link. -->
               <span class="link-block">
-                <a href="#"                                                                                  
-                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                <!-- <a href="https://arxiv.org/abs/2506.06570"                                                                                   -->
+                <a href="static/pdfs/paper.pdf"                                                                                  
+                class="external-link button is-normal is-rounded is-dark" target="_blank">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
@@ -97,7 +98,7 @@
               </span> -->
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="#"
+                <a href="https://youtu.be/yBJlayqXIic"
                    class="external-link button is-normal is-rounded is-dark" target="_blank">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -151,7 +152,7 @@
                 </a>
               </span> -->
             </div>
-            (coming soon)
+            <!-- (coming soon) -->
           </div>
         </div>
       </div>
@@ -160,12 +161,18 @@
 </section>
 
 
+
+<center>
+  <image src="./static/images/main_cover.png" style="width:50%;"></image>
+</center>
+
+
 <!-- Teaser video-->
 <!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-      <source src="static/videos/Final.mp4" type="video/mp4">
+      <source src="static/videos/video.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
       </h2>
@@ -174,9 +181,6 @@
 </section> -->
 <!-- End teaser video -->
 
-<center>
-  <image src="./static/images/cover.png" style="width:40%;"></image>
-</center>
 
 <section class="section">
   <div class="container" style="width: 50%">
@@ -201,7 +205,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            As robotic systems become increasingly integrated into real-world environments—ranging from autonomous vehicles to household assistants—they inevitably encounter diverse and unstructured scenarios that lead to failures. While such failures pose safety and reliability challenges, they also provide rich perceptual data for improving future performance. However, manually analyzing large-scale failure datasets is impractical. In this work, we present a method for automatically organizing large-scale robotic failure data into semantically meaningful clusters, enabling scalable learning from failure without human supervision. In this work, we present a method for automatically organizing large-scale robotic failure data into semantically meaningful clusters, enabling scalable learning from failure without human supervision. Our approach leverages the reasoning capabilities of Multimodal Large Language Models (MLLMs), trained on internet-scale data, to infer high-level failure causes from raw perceptual trajectories and discover interpretable structure within uncurated failure logs. These semantic clusters reveal latent patterns and hypothesized causes of failure, enabling scalable learning from experience. We demonstrate that the discovered failure modes can guide targeted data collection for policy refinement, accelerating iterative improvement in agent policies and overall safety. Additionally, we show that these semantic clusters can be employed for online failure detection, offering a lightweight yet powerful safeguard for real-time adaptation. We demonstrate that this framework enhances robot learning and robustness by transforming real-world failures into actionable and interpretable signals for adaptation.
+
+As robotic systems become increasingly integrated into real-world environments—ranging from autonomous vehicles to household assistants—they inevitably encounter diverse and unstructured scenarios that lead to failures. While such failures pose safety and reliability challenges, they also provide rich perceptual data for improving future performance.
+However, manually analyzing large-scale failure datasets is impractical. 
+In this work, we present a method for automatically organizing large-scale robotic failure data into semantically meaningful failure clusters, enabling scalable learning from failure without human supervision.
+Our approach leverages the reasoning capabilities of Multimodal Large Language Models (MLLMs), trained on internet-scale data, to infer high-level failure causes from raw perceptual trajectories and discover interpretable structure within uncurated failure logs.
+These semantic clusters reveal patterns and hypothesized causes of failure, enabling scalable learning from experience. 
+We demonstrate that the discovered failure modes can guide targeted data collection for policy refinement, accelerating iterative improvement in agent policies and overall safety. 
+Additionally, we show that these semantic clusters can benefit online failure monitoring systems, 
+offering a lightweight yet powerful safeguard for real-time operation.
+We demonstrate that this framework enhances robot learning and robustness by transforming real-world failures into actionable and interpretable signals for adaptation.
+
           </p>
         </div>
       </div>
@@ -230,79 +244,84 @@
       <br>
       We use Gemini 2.5 Pro for getting the descriptions and OpenaAI o4-mini to cluster them. Here is the list of generated failure clusters for two different datasets: <br><br>
  
-      <center>
+      <!-- <center>
         <image src="./static/images/cover_clustering.png" style="width: 60%;"></image>
       </center>
       <center>
         <span style="font-size:14px"><i> <span style="font-weight:bold">Fig.</span> Overview of the clustering process.</i>
-      </center>
+      </center> -->
+
+
+     <ul>
+        <li style="font-size: 1.2em;"><b>Robot Manipulation:</b></li>
       <ul>
-        <li><b>Driving Dataset:</b></li>
-      <ul>
-      
       <center>
-      <image src="./static/images/driving_clusters.png" style="width: 100%;"></image>
-      </center>
-      <center>
-        <image src="./static/images/driving_cluster_imgs.png" style="width: 50%;"></image>
-      </center>
-      <center>
-        <span style="font-size:14px"><i> <span style="font-weight:bold">Fig.</span> Generated Clusters for Driving Dataset.</i>
+      <image src="./static/images/clusters_visual_manip.png" style="width: 80%;"></image>
       </center>
 
-      <ul>
-        <li><b>Indoor Navigation Robot:</b></li>
-      <ul>
+      <br><br>
 
-        <center>
-        <image src="./static/images/wayptnav_clusters.png" style="width: 100%;"></image>
-        </center>
-        <center>
-          <image src="./static/images/wayptnav_cluster_imgs.jpg" style="width: 40%;"></image>
-          </center>
-        <center>
-          <span style="font-size:14px"><i> <span style="font-weight:bold">Fig.</span> Generated Clusters for Vision-based Indoor Navigation.</i>
-        </center>
+      <ul>
+        <li style="font-size: 1.2em;"><b>Real-World Car Crash:</b></li>
+      <ul>
+      <center>
+      <image src="./static/images/clusters_visual_driving.png" style="width: 80%;"></image>
+      </center>
+
+      <br><br>
+
+      <ul>
+        <li style="font-size: 1.2em;"><b>Vision-Based Indoor Navigation:</b></li>
+      <ul>
+      <center>
+      <image src="./static/images/clusters_visual_wayptnav.png" style="width: 80%;"></image>
+      </center>
+
 
     </div>
 </section>
 
+<h3 class="title is-2" style="text-align: center;">Evaluation of Failure Reasons & Clusters</h3>
 
+      <center>
+        <image src="./static/images/reasoning_eval2.png" style="width: 60%;"></image>
+        </center>
+      <center>
+        <span style="font-size:14px"><i> <span style="font-weight:bold">Table.</span> Failure reasoning performance of different MLLMs. <br> <span style="font-weight:bold">Fig.</span> A failure inference example where robot dropped a pot with water on the floor. <br> <span style="font-weight:bold">Fig.</span> Heatmap comparing similarity scores between expert-defined failure taxonomy and generated clusters.</i>
+
+      </center>
 
 
 <section class="section">
   <div class="container">
-    <h2 class="title is-2" style="text-align: center;">Runtime Monitoring Leveraging Failure Clusters</h2>
+    <h5 class="title is-2" style="text-align: center;">Runtime Failure Monitoring Leveraging Failure Clusters</h5>
     <div class="column">
       MLLMs can be used to perform Runtie Failure Monitoring but they fail when not provided any contextual information about the system behavior. We propose to use the generated failure clusters as that information as they lists all the most probable failures of the particular system and can help the MLLM detect them much better at runtime while looking at the past observations.
-      Our prompt is structured in Chain-of-Thought (CoT) manner, where the LLM first reasons about the robot possible future trajectory and then thinks if its predicted path and surrounding environment can lead to any of th situation listed in the clusters. We compare our method with SOTA VLM-based anomaly detection (VLM-AD), CNN-based failure classification methods (Leaderboard, ENet-BC), and also ablate without providing the cluster information in the prompt (NoContext).<br><br>
+      Our prompt is structured in Chain-of-Thought (CoT) manner, where the LLM first reasons about the robot possible future trajectory and then thinks if its predicted path and surrounding environment can lead to any of th situation listed in the clusters. We compare our method with SOTA LLM-based anomaly detection (LLM-AD), CNN-based failure classification methods (VideoMAE-BC, ENet-BC), and also ablate without providing the cluster information in the prompt (NoContext).<br><br>
 
       <!-- <ul>
         <li><b>Driving Dataset:</b></li>
       <ul> -->
       <center>
-        <image src="./static/images/driving_results.png" style="width: 80%;"></image>
+        <image src="./static/images/monitoring_final.png" style="width: 60%;"></image>
         </center>
         <center>
-          <span style="font-size:14px"><i> <span style="font-weight:bold">Table :</span> Runtime Monitoring Performance comparison for <b>Driving dataset</b>.</i>
+          <span style="font-size:14px"><i> <span style="font-weight:bold">Table :</span> Runtime Monitoring Performance comparison.</i>
         </center>
-        <br>
-        <!-- <ul>
-          <li><b>Indoor Navigation Robot:</b></li>
-        <ul> -->
-          <center>
+        <!-- <br> -->
+          <!-- <center>
           <image src="./static/images/wayptnav_results.png" style="width: 80%;"></image>
           </center>
           <center>
             <span style="font-size:14px"><i> <span style="font-weight:bold">Table :</span> Runtime Monitoring Performance comparison for <b>Vision-based Indoor Navigation</b>.</i>
-          </center>
+          </center> -->
       <br>
       The above tables show we get higher <b>F-1 Scores</b> and <b>Earlier Detection Times</b> than the baselnes methods. We also get better performance than NoContext. This reinforces the importance of providing context about system behavior in the prompt and the utility of our failure clusters for that.
       <br><i>(Refer the paper for more details on the baseline implementations and prompts)</i>
 
     <br><br>We also show an example of runtime monitoring in action with an expert fallback policy, which overrides the underlying controller when a failure is detected.<br><br>
       <center>
-      <image src="./static/images/fallback.png" style="width: 80%;"></image>
+      <image src="./static/images/traj.png" style="width: 60%;"></image>
       </center>
       <center>
         <span style="font-size:14px"><i> <span style="font-weight:bold">Fig.</span> Runtime Failure Monitoring in action while using a fallback controller.</i>
@@ -318,14 +337,9 @@
     <h2 class="title is-2" style="text-align: center;">Targeted Failure Data Collection and Policy Refinement</h2>
     <div class="column">
     
-      The generated failure clusters can be used to collect more data for the failure modes that are not well represented in the training data. We collect expert demonstrations around those clusters for the indoor robot navigation and augment the new dataset with original training dataset. After fine-tuning the policy with this augmneted dataset, the failure rate of the system drops from 46% to 18%.<br><br>
-      <!-- <br>
-      <center>
-      <image src="./static/images/retrain.png" style="width: 60%;"></image>
-      </center>
-      <center>
-        <span style="font-size:14px"><i> <span style="font-weight:bold">Fig.</span> Retraining performance improvement.</i>
-      </center> -->
+      We use the discovered clusters to guide expert data collection in targeted regions of the environment. The robot policy is fine-tuned on an augmented dataset containing an additional 40K samples collected in identified failure zones along with the original training data. 
+The failure rate in sampled trajectories drops from 46% to 18%, demonstrating enhanced safety in previously failure-prone situations, whereas fine-tuning with randomly collected additional data only improves the failure rate to 34%. 
+This forms a \textit{closed-loop} pipeline of failure discovery, targeted intervention, and policy refinement for continuously enhancing system safety.
     </div>
 
   </div>
