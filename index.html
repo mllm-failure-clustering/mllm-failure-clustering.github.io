@@ -281,15 +281,42 @@ We demonstrate that this framework enhances robot learning and robustness by tra
     </div>
 </section>
 
-<h3 class="title is-2" style="text-align: center;">Evaluation of Failure Reasons & Clusters</h3>
+<!-- <section class="section"></section>
+    <h3 class="title is-2" style="text-align: center;">Evaluation of Failure Reasons & Clusters</h3>
+
+    <div class="column">
+
+      <b>(Left)</b> We compare the failure reasoning abilities of different modes, including closed-source and open-source ones, and found Gemini 2.5 Pro to perform the best. 
 
       <center>
         <image src="./static/images/reasoning_eval2.png" style="width: 60%;"></image>
         </center>
       <center>
         <span style="font-size:14px"><i> <span style="font-weight:bold">Table.</span> Failure reasoning performance of different MLLMs. <br> <span style="font-weight:bold">Fig.</span> A failure inference example where robot dropped a pot with water on the floor. <br> <span style="font-weight:bold">Fig.</span> Heatmap comparing similarity scores between expert-defined failure taxonomy and generated clusters.</i>
-
       </center>
+
+    </div>
+</section> -->
+
+
+
+<section class="section">
+  <div class="container">
+    <h5 class="title is-2" style="text-align: center;">Evaluation of Generated Failure Reasons and Clusters</h5>
+    <div class="column">
+
+      We evaluate different open and closed source models for failure reasoning, and found Gemini 2.5 Pro to perform the best. We also compare the generated clusters with expert-defined failure taxonomy using similarity scores and our method generates failure modes that align well with human understanding of failures describing core issue behind failures and covering both prominent and long-tail issues..
+
+      <center>
+        <image src="./static/images/reasoning_eval2.png" style="width: 90%;"></image>
+        </center>
+      <center>
+        <span style="font-size:14px"><i> <span style="font-weight:bold">Table.</span> Failure reasoning performance of different MLLMs. <br> <span style="font-weight:bold">Fig.</span> A failure inference example where robot dropped a pot with water on the floor. <br> <span style="font-weight:bold">Fig.</span> Heatmap comparing similarity scores between expert-defined failure taxonomy and generated clusters.</i>
+      </center>
+
+    </div>
+</section>
+
 
 
 <section class="section">
